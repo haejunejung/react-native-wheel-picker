@@ -1,5 +1,7 @@
 ![Wheel Picker for React Native](https://shieldcn.dev/header/dots.svg?title=Wheel+Picker+for+React+Native&logo=ri%3APiMouseScrollFill&logoColor=000000&size=wide&mode=light)
 
+> **Status: Proof of Concept** - built as a standalone experiment to validate the approach before moving it into our app.
+
 A smooth, cross-platform wheel picker for React Native, powered by [Reanimated](https://docs.swmansion.com/react-native-reanimated/).
 
 - iOS-style 3D wheel, animated on the UI thread by Reanimated
