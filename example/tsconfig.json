@@ -1,0 +1,14 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@haejunejung/react-native-wheel-picker": ["../src/index.ts"],
+      "react-native": ["./node_modules/react-native"],
+      "react-native-reanimated": ["./node_modules/react-native-reanimated"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist", "android", "ios"]
+}

@@ -1,0 +1,7 @@
+{
+  // Used only by `bob build` (see `react-native-builder-bob.targets` in package.json).
+  // Identical to the root config except that `src/mock` — reference-only code that is not
+  // published — is left out of the emitted declaration files.
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "lib", "example", "src/mock"]
+}

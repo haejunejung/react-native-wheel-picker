@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Wheel Picker Example",
+    "slug": "wheel-picker-example",
+    "version": "1.0.0",
+    "scheme": "wheelpickerexample",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.haejunejung.wheelpickerexample",
+      "appleTeamId": "49F2HHH96Z"
+    },
+    "android": {
+      "package": "com.haejunejung.wheelpickerexample",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  }
+}

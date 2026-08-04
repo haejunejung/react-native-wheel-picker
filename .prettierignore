@@ -1,0 +1,12 @@
+node_modules
+.omc
+lib
+dist
+web-build
+.expo
+example/.expo
+example/dist
+example/android
+example/ios
+yarn.lock
+package-lock.json

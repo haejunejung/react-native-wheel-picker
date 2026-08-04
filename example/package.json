@@ -1,0 +1,44 @@
+{
+  "name": "wheel-picker-example",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start -c",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "prebuild": "expo prebuild --clean",
+    "export:web": "expo export --platform web --clear",
+    "serve:web": "npx serve dist --single",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~5.0.4",
+    "@haejunejung/react-native-wheel-picker": "link:..",
+    "expo": "~53.0.25",
+    "expo-status-bar": "~2.2.3",
+    "expo-system-ui": "~5.0.11",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.6",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-web": "^0.20.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "~9.2.0",
+    "eslint-config-prettier": "^9.1.0",
+    "typescript": "~5.8.3"
+  },
+  "expo": {
+    "install": {
+      "exclude": [
+        "@haejunejung/react-native-wheel-picker"
+      ]
+    }
+  }
+}
