@@ -326,14 +326,16 @@ export const WheelPicker = <T extends WheelPickerValue = string>(props: WheelPic
           }
         : undefined)}
       style={[{ height: containerHeight }, styles?.root]}>
-      <View
-        pointerEvents="none"
-        style={[
-          defaultStyles.highlightedArea,
-          { height: optionItemHeight, top: paddingVertical },
-          styles?.highlightedArea,
-        ]}
-      />
+      {styles?.highlightedArea && (
+        <View
+          pointerEvents="none"
+          style={[
+            defaultStyles.highlightedArea,
+            { height: optionItemHeight, top: paddingVertical },
+            styles?.highlightedArea,
+          ]}
+        />
+      )}
       <Animated.ScrollView
         ref={scrollViewRef}
         contentOffset={initialContentOffset}
@@ -367,14 +369,18 @@ export const WheelPicker = <T extends WheelPickerValue = string>(props: WheelPic
           />
         ))}
       </Animated.ScrollView>
-      <View
-        pointerEvents="none"
-        style={[defaultStyles.scrimTop, { height: paddingVertical }, styles?.scrim]}
-      />
-      <View
-        pointerEvents="none"
-        style={[defaultStyles.scrimBottom, { height: paddingVertical }, styles?.scrim]}
-      />
+      {styles?.scrim && (
+        <View
+          pointerEvents="none"
+          style={[defaultStyles.scrimTop, { height: paddingVertical }, styles?.scrim]}
+        />
+      )}
+      {styles?.scrim && (
+        <View
+          pointerEvents="none"
+          style={[defaultStyles.scrimBottom, { height: paddingVertical }, styles?.scrim]}
+        />
+      )}
     </View>
   );
 };
