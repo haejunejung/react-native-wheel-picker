@@ -36,7 +36,7 @@ export type WheelPickerProps<T extends WheelPickerValue = string> = UseControlla
    * The height of each option item in the wheel picker.
    * @default 40
    */
-  optionItemHeight: number;
+  optionItemHeight?: number;
   /**
    * The function to extract a unique key for each option item.
    * If not provided, the index of the option will be used as the key.
@@ -46,7 +46,7 @@ export type WheelPickerProps<T extends WheelPickerValue = string> = UseControlla
    * The number of visible options in the wheel picker. Must be an odd number.
    * @default 5
    */
-  visibleCount: number;
+  visibleCount?: number;
   /**
    * Boolean flag to enable or disable the press interaction on the option items.
    * When enabled, pressing an option item will select it and trigger the onChange callback.
