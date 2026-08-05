@@ -1,6 +1,6 @@
 const noop = () => {};
 
-export const useWheelPointerDrag = () => {
+export const useWheelPointerDrag = (props: any) => {
   return {
     handlePointerDown: noop,
     handlePointerMove: noop,

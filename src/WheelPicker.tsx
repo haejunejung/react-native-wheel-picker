@@ -22,7 +22,7 @@ import {
 } from "./constants";
 import type { WheelPickerOption, WheelPickerStyles, WheelPickerValue } from "./types";
 import { useControllableState, type UseControllableStateProps } from "./useControllableState";
-import { useWheelPointerDrag } from "./useWheelPointerDrag.web";
+import { useWheelPointerDrag } from "./useWheelPointerDrag";
 import { WheelPickerItem } from "./WheelPickerItem";
 
 export type WheelPickerProps<T extends WheelPickerValue = string> = UseControllableStateProps<
