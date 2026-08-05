@@ -87,9 +87,12 @@ export const WheelPicker = <T extends WheelPickerValue = string>(props: WheelPic
   const paddingVertical = (containerHeight - optionItemHeight) / 2;
   const radius = containerHeight / 2;
   const selectedIndex = React.useMemo(() => {
-    return options.findIndex((option) => option.value === controllableState);
+    return Math.max(
+      options.findIndex((option) => option.value === controllableState),
+      0,
+    );
   }, [controllableState, options]);
-  const initialOffsetY = Math.max(selectedIndex, 0) * optionItemHeight;
+  const initialOffsetY = selectedIndex * optionItemHeight;
 
   // Places the wheel before the first paint, so it never shows row 0 and jumps.
   // Frozen at mount on purpose, initialOffsetY is recomputed every render,
