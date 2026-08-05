@@ -273,9 +273,10 @@ export const WheelPicker = <T extends WheelPickerValue = string>(props: WheelPic
   // Where contentOffset already landed, scrolling to the same position is a harmless no-op.
   const handleContentSizeChange = useCallback(() => {
     if (didInitializeScrollRef.current) return;
+    if (options.length === 0) return;
     didInitializeScrollRef.current = true;
     scrollToIndex(selectedIndex, false);
-  }, [scrollToIndex, selectedIndex]);
+  }, [scrollToIndex, selectedIndex, options.length]);
 
   const handleItemPress = useCallback(
     (index: number) => {
