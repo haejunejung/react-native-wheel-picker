@@ -22,7 +22,9 @@ import {
 } from "./constants";
 import type { WheelPickerOption, WheelPickerStyles, WheelPickerValue } from "./types";
 import { useControllableState, type UseControllableStateProps } from "./useControllableState";
+import { usePreservedCallback } from "./usePreservedCallback";
 import { useWheelPointerDrag } from "./useWheelPointerDrag";
+import { noop } from "./utils";
 import { WheelPickerItem } from "./WheelPickerItem";
 
 export type WheelPickerProps<T extends WheelPickerValue = string> = UseControllableStateProps<
@@ -71,11 +73,14 @@ export const WheelPicker = <T extends WheelPickerValue = string>(props: WheelPic
     visibleCount = DEFAULT_VISIBLE_COUNT,
     value,
     defaultValue,
-    onChange,
-    onChanging,
+    onChange: onChangeProp = noop,
+    onChanging: onChangingProp = noop,
     styles,
     enableItemPress = DEFAULT_ENABLE_ITEM_PRESS,
   } = props;
+
+  const onChange = usePreservedCallback(onChangeProp);
+  const onChanging = usePreservedCallback(onChangingProp);
 
   const [controllableState, setControllableState] = useControllableState<T>({
     value,
