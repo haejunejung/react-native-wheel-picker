@@ -1,6 +1,7 @@
-const noop = () => {};
+import { noop } from "./utils";
 
-export const useWheelPointerDrag = (props: any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
+export const useWheelPointerDrag = (_: any) => {
   return {
     handlePointerDown: noop,
     handlePointerMove: noop,
